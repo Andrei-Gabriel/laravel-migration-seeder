@@ -17,9 +17,11 @@ class CreateHolidaysTable extends Migration
             $table->id();
             $table->string('tourist_package_name', 100);
             $table->string('from', 100);
-            $table->string('destination', 100);
-            $table->float('price', 5, 2);
-            $table->tinyInteger('duration');
+            $table->string('country_of_destination', 3);
+            $table->float('price', 5, 2)->unsigned();
+            $table->string('start_date', 10);
+            $table->tinyInteger('duration')->unsigned();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
