@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
+use App\Holiday;
 
 class DatabaseSeeder extends Seeder
 {
@@ -9,8 +11,14 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        // $this->call(UsersTableSeeder::class);
+        $newHoliday = new Holiday();
+        $newHoliday->tourist_package_name =
+        $newHoliday->from =
+        $newHoliday->destination =
+        $newHoliday->price =
+        $newHoliday->duration =
+        $newHoliday->save();
     }
 }
